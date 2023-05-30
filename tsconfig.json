@@ -23,8 +23,7 @@
 		"paths": {
 			"~/*": ["./app/*"],
 			"prisma/*": ["./prisma/*"],
-			"tests/*": ["./tests/*"],
-			"@/*": ["./app/*"]
+			"tests/*": ["./tests/*"]
 		},
 		"skipLibCheck": true,
 		"allowImportingTsExtensions": true,

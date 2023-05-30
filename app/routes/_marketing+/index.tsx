@@ -1,7 +1,7 @@
 import type { V2_MetaFunction } from '@remix-run/node'
 import { logos, kodyRocket, stars } from './logos/logos.ts'
 
-export const meta: V2_MetaFunction = () => [{ title: 'Epic Notes' }]
+export const meta: V2_MetaFunction = () => [{ title: 'Kraatz App' }]
 
 export default function Index() {
 	return (
@@ -14,7 +14,7 @@ export default function Index() {
 							<div className="absolute inset-0 bg-[color:rgba(30,23,38,0.5)] mix-blend-multiply" />
 						</div>
 						<div className="lg:pt-18 relative px-4 pb-8 pt-8 sm:px-6 sm:pb-14 sm:pt-16 lg:px-8 lg:pb-20">
-							<h1 className="text-center text-mega font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
+							<h1 className="sm:text-8xl lg:text-9xl text-center text-mega font-extrabold tracking-tight">
 								<a
 									className="block uppercase text-accent-pink drop-shadow-md"
 									href="https://www.epicweb.dev/stack"
@@ -22,7 +22,7 @@ export default function Index() {
 									Epic Stack
 								</a>
 							</h1>
-							<p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
+							<p className="text-xl mx-auto mt-6 max-w-lg text-center text-white sm:max-w-3xl">
 								Check the README.md file for instructions on how to get this
 								project deployed.
 							</p>

@@ -104,7 +104,7 @@ async function sendPasswordResetEmail({
 
 	await sendEmail({
 		to: user.email,
-		subject: `Epic Notes Password Reset`,
+		subject: `Kraatz App Password Reset`,
 		text: `Please open this URL: ${resetPasswordUrl}`,
 		html: `
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -113,8 +113,8 @@ async function sendPasswordResetEmail({
 				<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
 			</head>
 			<body>
-				<h1>Reset your Epic Notes password.</h1>
-				<p>Click the link below to reset the Epic Notes password for ${user.username}.</p>
+				<h1>Reset your Kraatz App password.</h1>
+				<p>Click the link below to reset the Kraatz App password for ${user.username}.</p>
 				<a href="${resetPasswordUrl}">${resetPasswordUrl}</a>
 			</body>
 		</html>
@@ -123,7 +123,7 @@ async function sendPasswordResetEmail({
 }
 
 export const meta: V2_MetaFunction = () => {
-	return [{ title: 'Password Recovery for Epic Notes' }]
+	return [{ title: 'Password Recovery for Kraatz App' }]
 }
 
 export default function SignupRoute() {
