@@ -1,56 +1,41 @@
 import type { V2_MetaFunction } from '@remix-run/node'
-import { logos, kodyRocket, stars } from './logos/logos.ts'
+import { logos } from './logos/logos.ts'
+import { Separator } from '@/components/separator.tsx'
 
 export const meta: V2_MetaFunction = () => [{ title: 'Kraatz App' }]
 
 export default function Index() {
 	return (
-		<main className="relative min-h-screen sm:flex sm:items-center sm:justify-center">
-			<div className="relative sm:pb-16 sm:pt-8">
-				<div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-					<div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
-						<div className="absolute inset-0">
-							<img className="h-full w-full object-cover" src={stars} alt="" />
-							<div className="absolute inset-0 bg-[color:rgba(30,23,38,0.5)] mix-blend-multiply" />
-						</div>
-						<div className="lg:pt-18 relative px-4 pb-8 pt-8 sm:px-6 sm:pb-14 sm:pt-16 lg:px-8 lg:pb-20">
-							<h1 className="sm:text-8xl lg:text-9xl text-center text-mega font-extrabold tracking-tight">
-								<a
-									className="block uppercase text-accent-pink drop-shadow-md"
-									href="https://www.epicweb.dev/stack"
-								>
-									Epic Stack
-								</a>
-							</h1>
-							<p className="text-xl mx-auto mt-6 max-w-lg text-center text-white sm:max-w-3xl">
-								Check the README.md file for instructions on how to get this
-								project deployed.
-							</p>
-							<a href="https://www.epicweb.dev">
-								<img
-									src={kodyRocket}
-									alt="Illustration of a Koala riding a rocket"
-									className="mx-auto mt-8 w-full max-w-[12rem] md:max-w-[16rem]"
-								/>
-							</a>
-						</div>
+		<>
+			<section className="flex h-[40vh] w-full flex-col justify-center md:h-[60vh] md:flex-row">
+				<div className="flex max-w-2xl items-center justify-center md:grow">
+					<img
+						src="/img/kraatz-logo.svg"
+						alt="Personal Logo"
+						className="ml-auto"
+					/>
+				</div>
+				<div className="m-8 flex items-center justify-center">
+					<div className="text-center md:text-start">
+						<h1 className="text-5xl">Matt Kraatz</h1>
+						<h2 className="italic">Full Stack Web Developer</h2>
 					</div>
 				</div>
+			</section>
 
-				<div className="mx-auto mt-8 max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
-					<div className="flex flex-wrap justify-center gap-8 rounded-3xl bg-day-300 py-4">
-						{logos.map(img => (
-							<a
-								key={img.href}
-								href={img.href}
-								className="flex h-16 w-32 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
-							>
-								<img alt={img.alt} src={img.src} className="object-contain" />
-							</a>
-						))}
-					</div>
+			<section className="mx-auto mt-8 max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
+				<div className="bg-day-300 flex flex-wrap justify-center gap-8 rounded-3xl py-4">
+					{logos.map(img => (
+						<a
+							key={img.href}
+							href={img.href}
+							className="flex h-16 w-32 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
+						>
+							<img alt={img.alt} src={img.src} className="object-contain" />
+						</a>
+					))}
 				</div>
-			</div>
-		</main>
+			</section>
+		</>
 	)
 }

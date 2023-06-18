@@ -12,7 +12,7 @@ import {
 	useNavigation,
 } from '@remix-run/react'
 import { z } from 'zod'
-import { GeneralErrorBoundary } from '~/components/error-boundary.tsx'
+import { GeneralErrorBoundary } from '@/components/error-boundary.tsx'
 import {
 	authenticator,
 	requireAnonymous,

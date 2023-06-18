@@ -8,7 +8,7 @@ import {
 } from '@remix-run/node'
 import { Link, useFetcher } from '@remix-run/react'
 import { z } from 'zod'
-import { GeneralErrorBoundary } from '~/components/error-boundary.tsx'
+import { GeneralErrorBoundary } from '@/components/error-boundary.tsx'
 import { prisma } from '~/utils/db.server.ts'
 import { sendEmail } from '~/utils/email.server.ts'
 import { decrypt, encrypt } from '~/utils/encryption.server.ts'

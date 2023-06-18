@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'nunito';
+	src: url('../../public/fonts/nunito-sans/nunito-sans-v12-latin_latin-ext-regular.woff2');
+}
+
 @layer base {
 	:root {
+		--font-sans: 'nunito';
+
 		--background: 0 0% 100%;
 		--foreground: 222.2 47.4% 11.2%;
 

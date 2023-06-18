@@ -2,7 +2,7 @@ import { useLoaderData, Outlet, NavLink, Link } from '@remix-run/react'
 import { json, type DataFunctionArgs } from '@remix-run/node'
 import { prisma } from '~/utils/db.server.ts'
 import { clsx } from 'clsx'
-import { GeneralErrorBoundary } from '~/components/error-boundary.tsx'
+import { GeneralErrorBoundary } from '@/components/error-boundary.tsx'
 import { getUserImgSrc } from '~/utils/misc.ts'
 import { requireUserId } from '~/utils/auth.server.ts'
 
@@ -52,7 +52,7 @@ export default function NotesRoute() {
 							alt={ownerDisplayName}
 							className="h-16 w-16 rounded-full object-cover lg:h-24 lg:w-24"
 						/>
-						<h1 className="text-center text-base font-bold md:text-lg lg:text-left lg:text-2xl">
+						<h1 className="text-base md:text-lg lg:text-2xl text-center font-bold lg:text-left">
 							{ownerDisplayName}'s Notes
 						</h1>
 					</Link>

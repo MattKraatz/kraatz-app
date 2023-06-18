@@ -9,7 +9,7 @@ import {
 import { getAllInstances, getInstanceInfo } from 'litefs-js'
 import { ensureInstance } from 'litefs-js/remix.js'
 import invariant from 'tiny-invariant'
-import { Spacer } from '~/components/spacer.tsx'
+import { Spacer } from '@/components/spacer.tsx'
 import {
 	cache,
 	getAllCacheKeys,
@@ -112,7 +112,7 @@ export default function CacheAdminRoute() {
 								defaultValue: query,
 							}}
 						/>
-						<div className="flex h-16 w-14 items-center text-lg font-medium text-slate-500">
+						<div className="text-lg flex h-16 w-14 items-center font-medium text-slate-500">
 							<span title="Total results shown">
 								{data.cacheKeys.sqlite.length + data.cacheKeys.lru.length}
 							</span>

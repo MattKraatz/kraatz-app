@@ -2,7 +2,6 @@ import * as Checkbox from '@radix-ui/react-checkbox'
 import { Link } from '@remix-run/react'
 import { clsx } from 'clsx'
 import React, { useId } from 'react'
-import styles from './forms.module.css'
 
 export type ListOfErrors = Array<string | null | undefined> | null | undefined
 
@@ -18,7 +17,7 @@ export function ErrorList({
 	return (
 		<ul id={id} className="space-y-1">
 			{errorsToRender.map(e => (
-				<li key={e} className="text-[10px] text-accent-red">
+				<li key={e} className="text-accent-red text-[10px]">
 					{e}
 				</li>
 			))}
@@ -41,14 +40,14 @@ export function Field({
 	const id = inputProps.id ?? fallbackId
 	const errorId = errors?.length ? `${id}-error` : undefined
 	return (
-		<div className={clsx(styles.field, className)}>
+		<div>
 			<input
 				id={id}
 				aria-invalid={errorId ? true : undefined}
 				aria-describedby={errorId}
 				placeholder=" "
 				{...inputProps}
-				className="h-16 w-full rounded-lg border border-night-400 bg-night-700 px-4 pt-4 text-body-xs caret-white outline-none focus:border-accent-purple disabled:bg-night-400"
+				className="text-body-xs border-night-400 bg-night-700 focus:border-accent-purple disabled:bg-night-400 h-16 w-full rounded-lg border px-4 pt-4 caret-white outline-none"
 			/>
 			{/* the label comes after the input so we can use the sibling selector in the CSS to give us animated label control in CSS only */}
 			<label htmlFor={id} {...labelProps} />
@@ -74,14 +73,14 @@ export function TextareaField({
 	const id = textareaProps.id ?? textareaProps.name ?? fallbackId
 	const errorId = errors?.length ? `${id}-error` : undefined
 	return (
-		<div className={clsx(styles.textareaField, className)}>
+		<div>
 			<textarea
 				id={id}
 				aria-invalid={errorId ? true : undefined}
 				aria-describedby={errorId}
 				placeholder=" "
 				{...textareaProps}
-				className="h-48 w-full rounded-lg border border-night-400 bg-night-700 px-4 pt-8 text-body-xs caret-white outline-none focus:border-accent-purple disabled:bg-night-400"
+				className="text-body-xs border-night-400 bg-night-700 focus:border-accent-purple disabled:bg-night-400 h-48 w-full rounded-lg border px-4 pt-8 caret-white outline-none"
 			/>
 			{/* the label comes after the input so we can use the sibling selector in the CSS to give us animated label control in CSS only */}
 			<label htmlFor={id} {...labelProps} />
@@ -110,7 +109,7 @@ export function CheckboxField({
 	const id = buttonProps.id ?? buttonProps.name ?? fallbackId
 	const errorId = errors?.length ? `${id}-error` : undefined
 	return (
-		<div className={styles.checkboxField}>
+		<div>
 			<div className="flex gap-2">
 				<Checkbox.Root
 					id={id}

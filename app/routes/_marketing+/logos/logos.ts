@@ -19,8 +19,6 @@ import eslint from './eslint.svg'
 
 export { default as stars } from './stars.jpg'
 
-export { default as kodyRocket } from './kody-rocket.png'
-
 export const logos = [
 	{
 		src: remix,

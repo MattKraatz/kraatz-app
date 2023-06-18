@@ -81,14 +81,14 @@ export default function App() {
 	const nonce = useNonce()
 	const { user } = data
 	return (
-		<html lang="en" className="dark h-full">
+		<html lang="en" className="h-full">
 			<head>
 				<Meta />
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width,initial-scale=1" />
 				<Links />
 			</head>
-			<body className="bg-night-700 flex h-full flex-col justify-between text-white">
+			<body className="container mx-auto">
 				<MainNavigation>
 					<Outlet />
 				</MainNavigation>

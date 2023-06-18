@@ -1,6 +1,6 @@
 import { json, type DataFunctionArgs } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
-import { GeneralErrorBoundary } from '~/components/error-boundary.tsx'
+import { GeneralErrorBoundary } from '@/components/error-boundary.tsx'
 import { DeleteNote } from '~/routes/resources+/delete-note.tsx'
 import { getUserId } from '~/utils/auth.server.ts'
 import { prisma } from '~/utils/db.server.ts'

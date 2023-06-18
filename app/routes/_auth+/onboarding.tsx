@@ -15,7 +15,7 @@ import {
 	useSearchParams,
 } from '@remix-run/react'
 import { z } from 'zod'
-import { Spacer } from '~/components/spacer.tsx'
+import { Spacer } from '@/components/spacer.tsx'
 import { authenticator, requireAnonymous, signup } from '~/utils/auth.server.ts'
 import { Button, CheckboxField, ErrorList, Field } from '~/utils/forms.tsx'
 import { safeRedirect } from '~/utils/misc.ts'
